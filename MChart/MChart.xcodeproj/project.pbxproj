@@ -14,6 +14,11 @@
 		62395D781CC2972900AD6FAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62395D761CC2972900AD6FAF /* Main.storyboard */; };
 		62395D7A1CC2972900AD6FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62395D791CC2972900AD6FAF /* Assets.xcassets */; };
 		62395D7D1CC2972900AD6FAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62395D7B1CC2972900AD6FAF /* LaunchScreen.storyboard */; };
+		62395D861CC2A94800AD6FAF /* MChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62395D5B1CC25CB900AD6FAF /* MChart.framework */; };
+		62395D8D1CC5335000AD6FAF /* CALayer+draw.h in Headers */ = {isa = PBXBuildFile; fileRef = 62395D8B1CC5335000AD6FAF /* CALayer+draw.h */; };
+		62395D8E1CC5335000AD6FAF /* CALayer+draw.m in Sources */ = {isa = PBXBuildFile; fileRef = 62395D8C1CC5335000AD6FAF /* CALayer+draw.m */; };
+		62395D951CC534A300AD6FAF /* MLineLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 62395D931CC534A300AD6FAF /* MLineLayer.h */; };
+		62395D961CC534A300AD6FAF /* MLineLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 62395D941CC534A300AD6FAF /* MLineLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,10 @@
 		62395D791CC2972900AD6FAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62395D7C1CC2972900AD6FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62395D7E1CC2972900AD6FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62395D8B1CC5335000AD6FAF /* CALayer+draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+draw.h"; sourceTree = "<group>"; };
+		62395D8C1CC5335000AD6FAF /* CALayer+draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+draw.m"; sourceTree = "<group>"; };
+		62395D931CC534A300AD6FAF /* MLineLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLineLayer.h; sourceTree = "<group>"; };
+		62395D941CC534A300AD6FAF /* MLineLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLineLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62395D861CC2A94800AD6FAF /* MChart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,10 @@
 		62395D661CC25CFB00AD6FAF /* MChart */ = {
 			isa = PBXGroup;
 			children = (
+				62395D8B1CC5335000AD6FAF /* CALayer+draw.h */,
+				62395D8C1CC5335000AD6FAF /* CALayer+draw.m */,
+				62395D931CC534A300AD6FAF /* MLineLayer.h */,
+				62395D941CC534A300AD6FAF /* MLineLayer.m */,
 			);
 			path = MChart;
 			sourceTree = "<group>";
@@ -116,7 +130,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62395D8D1CC5335000AD6FAF /* CALayer+draw.h in Headers */,
 				62395D5F1CC25CB900AD6FAF /* MChart.h in Headers */,
+				62395D951CC534A300AD6FAF /* MLineLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62395D8E1CC5335000AD6FAF /* CALayer+draw.m in Sources */,
+				62395D961CC534A300AD6FAF /* MLineLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +373,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.micker.MChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -372,6 +391,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.micker.MChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -383,7 +403,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = testChart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.micker.testChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -394,7 +417,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = testChart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.micker.testChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -419,6 +445,7 @@
 				62395D651CC25CB900AD6FAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62395D7F1CC2972900AD6FAF /* Build configuration list for PBXNativeTarget "testChart" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +454,7 @@
 				62395D811CC2972900AD6FAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
