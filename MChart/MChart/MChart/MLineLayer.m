@@ -64,6 +64,7 @@ static CGFloat padding = 24.;
             }];
             
         }
+        [self setNeedsDisplay];
     }
 }
 

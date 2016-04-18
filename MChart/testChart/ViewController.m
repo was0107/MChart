@@ -51,7 +51,6 @@
                        [[MLineModal alloc] initWithX:220 y:120 name:@"例"],
                        nil];
         [self.view.layer addSublayer:layer];
-        [layer setNeedsDisplay];
     }
     // Do any additional setup after loading the view, typically from a nib.
 }
